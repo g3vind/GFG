@@ -1,0 +1,17 @@
+HashMap<Integer,Integer>hash = new HashMap<>();
+        for(int i : a){
+        // if the element  present in the HashMap we'll add the count of that element 
+            if(hash.containsKey(i)){
+                hash.put(i, hash.get(i)+1);
+            }
+        // if Not we'll put that element   
+            else{
+                hash.put(i,1);
+            }
+            // if Count of that element is equal to k we return that element
+            if(hash.get(i) == k){
+                return i;
+            }
+        }
+        
+        return -1;
